@@ -7,10 +7,8 @@ class HomePage extends Component {
             <div className="App">
                 <header className="App-header">
                     <p className="text-construcation">
-                        teste
+                        HOME PAGE
                     </p>
-               
-
                 </header>
             </div>
         );

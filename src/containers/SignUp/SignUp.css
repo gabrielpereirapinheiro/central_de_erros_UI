@@ -12,6 +12,14 @@
     animation: FadeIn 4s;
 }
 
+#already-have-account{
+    display: block;
+}
+
+#rote-sign-in{
+    color: white;
+    cursor: pointer;
+}
 
 .title-working{
     animation: moveInRight 1.2s;

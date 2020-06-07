@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import classes from './SignUp.css';
-import { Button,Form, Input } from 'element-react';
+import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
+
 class SignUp extends Component {
     state = {
         loadingSignUp: false,
@@ -21,8 +22,8 @@ class SignUp extends Component {
     };
 
     componentDidMount = () => {
-
     }
+
     onChange(key, value) {
         this.setState({
             form: Object.assign({}, this.state.form, { [key]: value })
@@ -35,6 +36,11 @@ class SignUp extends Component {
         }
     };
 
+    roteSignIn = (e) => {
+        this.props.history.push({
+            pathname: '/',
+        });
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -44,17 +50,11 @@ class SignUp extends Component {
         this.refs.form.validate((valid) => {
             if (valid) {
                 this.setState({ sucessSignUp: true });
-
-                // this.props.history.push({
-                //     pathname: '/',
-                // });
             } else {
                 this.setState({ loadingSignUp: false });
             }
         });
     }
-
-
 
     render() {
         return (
@@ -85,6 +85,8 @@ class SignUp extends Component {
                             </Form>
 
                             <Button color="primary" loading={this.state.loadingSignUp} onClick={(e) => this.handleSubmit(e)}>Cadastrar</Button>
+
+                            <p id="already-have-account">Já possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Entrar</a></p>
 
                         </div>
                     )
