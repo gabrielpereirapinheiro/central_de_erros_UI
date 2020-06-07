@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classes from './SignUp.css';
 import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
+import tick from "../../assets/img/logo-central-erro.png";
 
 class SignUp extends Component {
     state = {
@@ -38,7 +39,7 @@ class SignUp extends Component {
 
     roteSignIn = (e) => {
         this.props.history.push({
-            pathname: '/',
+            pathname: '/sign-in',
         });
     }
 
@@ -59,6 +60,13 @@ class SignUp extends Component {
     render() {
         return (
             <div class="header">
+
+
+                <div class="logo-box">
+                    <img src={tick} alt="Logo" class="logo" />
+                </div>
+
+
 
                 {this.state.sucessSignUp ?
                     (
@@ -86,8 +94,9 @@ class SignUp extends Component {
 
                             <Button color="primary" loading={this.state.loadingSignUp} onClick={(e) => this.handleSubmit(e)}>Cadastrar</Button>
 
-                            <p id="already-have-account">Já possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Entrar</a></p>
-
+                            <div>
+                                <p id="already-have-account">Já possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Entrar</a></p>
+                            </div>
                         </div>
                     )
                 }

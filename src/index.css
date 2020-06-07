@@ -40,7 +40,8 @@ body{
 
 .header{
   height: 100vh;
-  background-image: linear-gradient(to right bottom,rgba(21, 84, 239, 0.8),rgb(211, 211, 212));
+  background-color: #ececec;
+  /* background-image: linear-gradient(to right bottom,rgba(21, 84, 239, 0.8),rgb(211, 211, 212)); */
   background-size: cover;
   background-position: top;
   position: relative;
@@ -55,6 +56,11 @@ body{
 .logo{
   height: 35px;
 }
+
+.div-margin-top{
+  margin-top: 30px;
+}
+
 
 .text-box{
   position: absolute;
@@ -76,9 +82,9 @@ body{
   display: block;
   font-size: 60px;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 28px;
   animation: moveInLeft;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 
 .heading-primary-sub{
@@ -87,7 +93,7 @@ body{
   font-weight: 700;
   letter-spacing: 17.5px;
   animation: moveInRight;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 
 @keyframes moveInRight {
@@ -142,6 +148,30 @@ body{
 .btn-animated{
   animation:moveInBottom 1s ease-in-out ;
   animation-fill-mode: backwards;
+}
+
+
+@media (max-width:1300px){
+  .heading-primary-main{
+    display: block;
+    font-size: 41px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft;
+    animation-duration: 2s;
+  }
+}
+
+
+@media (max-width:1000px){
+  .heading-primary-main{
+    display: block;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveInLeft;
+    animation-duration: 2s;
+  }
 }
 
 
