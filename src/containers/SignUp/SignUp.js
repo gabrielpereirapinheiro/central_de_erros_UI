@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import classes from './SignUp.css';
 import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
-import tick from "../../assets/img/logo-central-erro.png";
+import tick from "../../assets/img/navegador.svg";
 
 class SignUp extends Component {
     state = {
@@ -95,6 +95,8 @@ class SignUp extends Component {
                             <Button color="primary" loading={this.state.loadingSignUp} onClick={(e) => this.handleSubmit(e)}>Cadastrar</Button>
 
                             <div>
+                            <p id="already-have-account">Já possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Entrar</a></p>
+
                                 <p id="already-have-account">Já possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Entrar</a></p>
                             </div>
                         </div>

@@ -43,7 +43,6 @@ class SignIn extends Component {
         });
     }
 
-
     roteHome = (e) => {
         this.props.history.push({
             pathname: '/',
