@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+import HomePage from './containers/HomePage/HomePage'
+import SignUp from './containers/SignUp/SignUp';
+import SignIn from './containers/SignIn/SignIn';
+import ResetPassword from './containers/ResetPassword/ResetPassword';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  // componentDidMount() {
+  // }
+
+  render() {
+    let routes;
+
+    routes = (
+
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+
+        <Route path="/cadastro" exact component={SignUp} />
+        <Route path="/sign-up" exact component={SignUp} />
+
+        <Route path="/login" exact component={SignIn} />
+        <Route path="/sign-in" exact component={SignIn} />
+
+        <Route path="/reset-password" exact component={ResetPassword} />
+        <Route path="/esqueci-a-senha" exact component={ResetPassword} />
+
+        <Redirect to="/" />
+      </Switch>
+    )
+
+    return (
+      <div>
+        {routes}
+      </div>
+    );
+  }
 }
 
 export default App;
