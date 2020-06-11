@@ -121,7 +121,7 @@ body{
 
 .info-text{
   margin-left: 10px;
-  font-size: 13px;
+  font-size: 11px;
   cursor: pointer;
 }
 
@@ -134,6 +134,11 @@ body{
   margin-top:20px;
 }
 
+.text-form-area{
+  margin-top: 8%;
+    width: 50%;
+}
+
 .info{
   color: #0F6EB4;
   display: flex;
@@ -142,6 +147,10 @@ body{
 
 .main-area{
   margin-top:10%;
+}
+
+.area-inputs{
+  transform: translate(13%,39%);
 }
 
 .div-20{

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import bgPink from '../../assets/img/bg-pink.svg'
 import bgOrange from '../../assets/img/bg-orange.svg'
 
-
 class HomePage extends Component {
 
     routeTo = (destiny) => {
@@ -10,8 +9,6 @@ class HomePage extends Component {
             pathname: '/' + destiny,
         });
     }
-
-
 
     render() {
         return (
@@ -24,8 +21,10 @@ class HomePage extends Component {
                 <div class="div-60">
 
                     <div class="info">
-                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text">Cadastrar</h3>
-                        <h3 onClick={(e) => this.routeTo("about")}  class="info-text">Sobre</h3>
+                    <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastrar</h3>
+                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
 
                     <div class="main-area">

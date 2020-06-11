@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import bgPink from '../../assets/img/bg-pink.svg'
-import bgOrange from '../../assets/img/bg-orange.svg'
+import bgPink from '../../assets/img/bg-orange-left.svg'
+import bgOrange from '../../assets/img/bg-pink-right.svg'
 
 
 class HomePage extends Component {
@@ -24,10 +24,9 @@ class HomePage extends Component {
                 <div class="div-60">
 
 
-                    <h3 onClick={(e) => this.routeTo("")} class="info-text info-text-home float-left">Inicio</h3>
-
-
                     <div class="info">
+                    <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
                         <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastrar</h3>
                         <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
@@ -46,9 +45,7 @@ class HomePage extends Component {
                             <p>text texttext texttext texttext texttext texttext texttext texttext texttext texttext text</p>
                             <p>text texttext texttext texttext texttext texttext texttext texttext texttext texttext text</p>
 
-
                         </div>
-
 
                     </div>
                 </div>
