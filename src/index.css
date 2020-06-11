@@ -129,6 +129,11 @@ body{
   color: #eb145f;  
 }
 
+.text-area-about{
+  color: #0F6EB4;
+  margin-top:20px;
+}
+
 .info{
   color: #0F6EB4;
   display: flex;

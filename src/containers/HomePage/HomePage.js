@@ -5,17 +5,12 @@ import bgOrange from '../../assets/img/bg-orange.svg'
 
 class HomePage extends Component {
 
-    roteSignIn = (e) => {
+    routeTo = (destiny) => {
         this.props.history.push({
-            pathname: '/sign-in',
+            pathname: '/' + destiny,
         });
     }
 
-    roteSignUp= (e) => {
-        this.props.history.push({
-            pathname: '/sign-up',
-        });
-    }
 
 
     render() {
@@ -29,8 +24,8 @@ class HomePage extends Component {
                 <div class="div-60">
 
                     <div class="info">
-                        <h3 onClick={(e) => this.roteSignUp(e)} class="info-text">Cadastrar</h3>
-                        <h3 class="info-text">Sobre</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text">Cadastrar</h3>
+                        <h3 onClick={(e) => this.routeTo("about")}  class="info-text">Sobre</h3>
                     </div>
 
                     <div class="main-area">
@@ -40,7 +35,7 @@ class HomePage extends Component {
                         <h1 class="title-home-page title-color">Erros</h1>
                         <div class="barra-azul"></div>
 
-                        <button onClick={(e) => this.roteSignIn(e)} id="button-entrar">Entrar</button>
+                        <button onClick={(e) => this.routeTo("sign-in")} id="button-entrar">Entrar</button>
 
                     </div>
                 </div>

@@ -5,6 +5,8 @@ import HomePage from './containers/HomePage/HomePage'
 import SignUp from './containers/SignUp/SignUp';
 import SignIn from './containers/SignIn/SignIn';
 import ResetPassword from './containers/ResetPassword/ResetPassword';
+import About from './containers/About/About';
+
 
 import './App.css';
 
@@ -29,6 +31,10 @@ class App extends Component {
 
         <Route path="/reset-password" exact component={ResetPassword} />
         <Route path="/esqueci-a-senha" exact component={ResetPassword} />
+
+        <Route path="/about" exact component={About} />
+        <Route path="/sobre" exact component={About} />
+
 
         <Redirect to="/" />
       </Switch>
