@@ -19,21 +19,7 @@
     animation: moveInRight 1.2s;
 
 }
-@keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-10vw);
-    }
-    80%{
-        opacity: 1;
-        transform: translateX(+3vw);
 
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
 
 @keyframes FadeIn {
     0% {
