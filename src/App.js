@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-
 //No AUTHENTICATION
 import HomePage from './containers/HomePage/HomePage'
 import SignUp from './containers/SignUp/SignUp';
@@ -9,9 +8,6 @@ import SignIn from './containers/SignIn/SignIn';
 import ResetPassword from './containers/ResetPassword/ResetPassword';
 import About from './containers/About/About';
 import Cookies from "js-cookie";
-
-
-
 
 //AUTHENTICATION
 import HomePageAuth from './containers/HomePageAuth/HomePageAuth';
@@ -21,18 +17,12 @@ import './App.css';
 
 class App extends Component {
 
-  componentDidMount() {
-  }
-
   render() {
     let routes;
     const token = Cookies.get('tk');
 
-
     if(token){
       routes = (
-
-
         <Switch>
           <Route path="/" exact component={HomePageAuth} />
           <Route path="/logout" exact component={Logout} />
@@ -41,7 +31,6 @@ class App extends Component {
       )
     }else{
       routes = (
-
 
         <Switch>
           <Route path="/" exact component={HomePage} />
@@ -58,13 +47,11 @@ class App extends Component {
           <Route path="/about" exact component={About} />
           <Route path="/sobre" exact component={About} />
   
-  
           <Redirect to="/" />
         </Switch>
       )
     }
    
-
     return (
       <div>
         {routes}

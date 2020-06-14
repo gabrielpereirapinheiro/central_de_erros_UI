@@ -28,7 +28,6 @@ class HomePage extends Component {
                     </div>
 
                     <div class="main-area">
-
                         <h1 class="title-home-page title-color">Central</h1>
                         <h2 class="sub-title-home-page title-color">de</h2>
                         <h1 class="title-home-page title-color">Erros</h1>

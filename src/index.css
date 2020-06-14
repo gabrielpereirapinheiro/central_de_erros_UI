@@ -11,8 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#reset-password{
+cursor: pointer;
+}
+
+#reset-password:hover{
+  color: #FF9000;
+}
+
+#login-keep-conected{
+  display: block;
+}
+
+#button-login{
+  width: 100%;
+  color: #0F6EB4;
+  border: 1px solid #0F6EB4;
+  cursor: pointer;
+  background-color: transparent;
+  height: 30px;
+}
+
+#button-login:hover{
+  background-color: #0F6EB4;
+  color: #fff;
+}
 
 
+#keep-conected{
+  display: block;
+}
 
 /*
 COLORS:
@@ -22,7 +50,6 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
 
 * {
   margin: 0;
@@ -40,6 +67,7 @@ body{
 
 .div-home-page{
   display: flex;
+  overflow: hidden;
 }
 
 .title-home-page{
