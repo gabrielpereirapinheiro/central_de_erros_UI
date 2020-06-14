@@ -1,26 +1,22 @@
 import React, { Component } from "react";
-import bgPinkLeft from '../../assets/img/bg-pink-right.svg'
+import bgPinkLeft from '../../assets/img/bg-pink-right.svg';
 import classes from './ResetPassword.css';
 import { Form, Input } from 'element-react';
+import { strings } from "../../shared/locale";
 
 class ResetPassword extends Component {
 
-
     state = {
-        loadingSignIn: false,
-        sucessSignIn: false,
-        keepLoged:false,
         form: {
             email: '',
         },
         rules: {
             email: [
-                { required: true, message: "Por favor, digite seu email", trigger: 'change' }
+                { required: true, message: strings["pt-BR"].type_your_email , trigger: 'change' }
             ]
         }
     };
 
-    
     onChange(key, value) {
         this.setState({
             form: Object.assign({}, this.state.form, { [key]: value })
@@ -50,6 +46,7 @@ class ResetPassword extends Component {
             if (valid) {
 
             } else {
+
             }
         });
     }
@@ -65,7 +62,7 @@ class ResetPassword extends Component {
 
                 <div class="info">
                         <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Entrar</h3>
                         <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
                         <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>

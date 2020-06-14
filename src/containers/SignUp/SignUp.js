@@ -5,6 +5,8 @@ import { Button, Form, Input } from 'element-react';
 // import tick from "../../assets/img/navegador.svg";
 import bgPink from '../../assets/img/bg-orange-left.svg'
 // import bgOrange from '../../assets/img/bg-pink-right.svg'
+import { strings } from "../../shared/locale";
+
 class SignUp extends Component {
     state = {
         loadingSignUp: false,
@@ -15,10 +17,10 @@ class SignUp extends Component {
         },
         rules: {
             email: [
-                { required: true, message: "Por favor, digite seu email", trigger: 'change' }
+                { required: true, message: strings["pt-BR"].type_your_email , trigger: 'change' }
             ],
             password: [
-                { required: true, message: "Por favor, digite sua senha", trigger: 'change' },
+                { required: true, message: strings["pt-BR"].type_your_password , trigger: 'change' }
             ],
         }
     };
@@ -69,7 +71,6 @@ class SignUp extends Component {
                 </div>
 
                 <div class="div-60">
-
 
                     <div class="info">
                     <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
