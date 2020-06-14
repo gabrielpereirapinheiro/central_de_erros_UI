@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import bgPink from '../../assets/img/bg-pink.svg'
 import bgOrange from '../../assets/img/bg-orange.svg'
+import AuthRoutes from '../../components/AuthRoutes/AuthRoutes';
 
 class HomePageAuth extends Component {
 
@@ -20,16 +21,11 @@ class HomePageAuth extends Component {
 
                 <div class="div-60">
 
-                    <div class="info">
-                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
-                        <h3 onClick={(e) => this.routeTo("logout")} class="info-text float-right">Sair</h3>
-                    </div>
+                    <AuthRoutes click={this.routeTo}></AuthRoutes>
 
                     <div class="main-area">
-
                         <h1 class="title-home-page title-color">HomePageAuth</h1>
                         <div class="barra-azul"></div>
-
                     </div>
                 </div>
 

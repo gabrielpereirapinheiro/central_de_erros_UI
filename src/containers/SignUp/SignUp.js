@@ -18,16 +18,14 @@ class SignUp extends Component {
         },
         rules: {
             email: [
-                { required: true, message: strings["pt-BR"].type_your_email , trigger: 'change' }
+                { required: true, message: strings["pt-BR"].type_your_email, trigger: 'change' }
             ],
             password: [
-                { required: true, message: strings["pt-BR"].type_your_password , trigger: 'change' }
+                { required: true, message: strings["pt-BR"].type_your_password, trigger: 'change' }
             ],
         }
     };
 
-    componentDidMount = () => {
-    }
 
     onChange(key, value) {
         this.setState({
@@ -72,20 +70,12 @@ class SignUp extends Component {
                 </div>
 
                 <div class="div-60">
-
-                    <div class="info">
-
-
-                    <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
-                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
-                    </div>
+                    <Routes click={this.routeTo}></Routes>
 
                     <div class="area-inputs">
 
                         <h1 class="title-home-page title-color">Cadastro</h1>
-                       
+
                         <div class="barra-azul"></div>
 
                         <div class="text-form-area">
@@ -110,7 +100,7 @@ class SignUp extends Component {
 
                     </div>
                 </div>
-{/* 
+                {/* 
                 <div class="div-20 move-right-animation align-right">
                     <img src={bgOrange}></img>
                 </div> */}
@@ -125,4 +115,4 @@ class SignUp extends Component {
 export default SignUp;
 
 
-  
+
