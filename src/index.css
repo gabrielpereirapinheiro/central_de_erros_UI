@@ -88,6 +88,7 @@ body{
 
 
 .barra-azul{
+  margin-top:10px;
   width: 76px;
   height: 10px;
   border-bottom: 3px solid #0F6EB4;
@@ -121,7 +122,7 @@ body{
 
 .info-text{
   margin-left: 10px;
-  font-size: 11px;
+  font-size: 15px;
   cursor: pointer;
 }
 
