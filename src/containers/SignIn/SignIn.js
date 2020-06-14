@@ -7,6 +7,7 @@ import bgOrange from '../../assets/img/bg-pink-right.svg'
 import Cookies from "js-cookie";
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Routes from '../../components/Routes/Routes';
 
 class SignIn extends Component {
     state = {
@@ -46,11 +47,6 @@ class SignIn extends Component {
         this.setState({keepLoged:status});
     }
 
-    routeTo = (destiny) => {
-        this.props.history.push({
-            pathname: '/' + destiny,
-        });
-    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -96,17 +92,12 @@ class SignIn extends Component {
 
                 <div class="div-60">
 
-
-                    <div class="info">
-                        <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
-                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
-                    </div>
+                    <Routes></Routes>
 
                     <div class="area-inputs">
 
                         <h1 class="title-home-page title-color">Login</h1>
+
                         <div class="barra-azul"></div>
 
                         <div class="text-form-area">
