@@ -1,45 +1,49 @@
 import React, { Component } from "react";
+import bgPink from '../../assets/img/bg-pink.svg'
+import bgOrange from '../../assets/img/bg-orange.svg'
 
 class HomePage extends Component {
 
-
-    roteSignUp = (e) => {
+    routeTo = (destiny) => {
         this.props.history.push({
-            pathname: '/sign-up',
+            pathname: '/' + destiny,
         });
     }
 
     render() {
         return (
-            <div>
+            <div class="div-home-page full-page">
 
-                <header class="header">
+                <div class="div-20 move-left-animation">
+                    <img src={bgPink}></img>
+                </div>
 
-                    <div class="logo-box">
-                        {/* <img src="img/logo-white.png" alt="Logo" class="logo"> */}
+                <div class="div-60">
+
+                    <div class="info">
+                    <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
+                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
 
+                    <div class="main-area">
 
-                    <div class="text-box">
-                        <h1 class="heading-primary">
-                            <span class="heading-primary-main">CENTRAL</span>
-                            <span class="heading-primary-main">DE ERROS</span>
+                        <h1 class="title-home-page title-color">Central</h1>
+                        <h2 class="sub-title-home-page title-color">de</h2>
+                        <h1 class="title-home-page title-color">Erros</h1>
+                        <div class="barra-azul"></div>
 
-                            {/* <span class="heading-primary-sub">Desevolvido em C#</span> */}
-                        </h1>
+                        <button onClick={(e) => this.routeTo("sign-in")} id="button-entrar">Entrar</button>
 
-                        <a href="/sign-in" class="btn btn-white btn-animated">
-                            Entrar
-                        </a>
-
-                        <div className="div-margin-top">
-                            <p id="dont-have-account">Não possui conta? <a id="rote-sign-in" onClick={(e) => this.roteSignUp(e)}>Cadastrar</a></p>
-                        </div>
                     </div>
+                </div>
 
-                </header>
+                <div class="div-20 move-right-animation align-right">
+                    <img src={bgOrange}></img>
+                </div>
+
             </div>
-
         );
     }
 }

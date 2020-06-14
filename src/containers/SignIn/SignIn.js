@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import classes from './SignIn.css';
 import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
-import tick from "../../assets/img/navegador.svg";
+// import bgPink from '../../assets/img/bg-orange-left.svg'
+import bgOrange from '../../assets/img/bg-pink-right.svg'
+import Cookies from "js-cookie";
 
 class SignIn extends Component {
     state = {
@@ -37,15 +39,10 @@ class SignIn extends Component {
         }
     };
 
-    roteSignIn = (e) => {
-        this.props.history.push({
-            pathname: '/',
-        });
-    }
 
-    roteHome = (e) => {
+    routeTo = (destiny) => {
         this.props.history.push({
-            pathname: '/',
+            pathname: '/' + destiny,
         });
     }
 
@@ -58,6 +55,17 @@ class SignIn extends Component {
         this.refs.form.validate((valid) => {
             if (valid) {
                 this.setState({ sucessSignIn: true });
+                
+                const expirationDate = new Date(new Date().getTime() + 1111110* 1000);
+                let token = "tokentesteblabla";
+                Cookies.set('tk', token, {
+                    expires: expirationDate,
+                    secure: (window.location.protocol === 'https:')
+                });
+                
+                window.location.reload();
+                // this.routeTo("");
+
             } else {
                 this.setState({ loadingSignIn: false });
             }
@@ -66,36 +74,56 @@ class SignIn extends Component {
 
     render() {
         return (
-            <div class="header">
+            <div class="div-home-page full-page">
 
-                <div class="logo-box">
-                    <img onClick={(e) => this.roteHome(e)} src={tick} alt="Logo" class="logo" />
+                <div class="div-20 move-left-animation">
+                    {/* <img src={bgPink}></img> */}
                 </div>
 
-                <div class="text-box">
-                    <h1 className="title-sing-up">
-                        Login
-                            </h1>
+                <div class="div-60">
 
-                    <Form id="teste" htmlFor="email" className={classes.allForm} ref="form" model={this.state.form} rules={this.state.rules}>
-                        <Form.Item prop="email" labelWidth="0px">
-                            <Input className="inputs-sing-up" placeholder={"Email"} type="text" value={this.state.form.email} onChange={this.onChange.bind(this, 'email')} onKeyPress={this.handleKeyPress} />
-                        </Form.Item>
-                        <Form.Item prop="password" labelWidth="0px">
-                            <Input className="inputs-sing-up" placeholder={"Senha"} type="password" value={this.state.form.password} onChange={this.onChange.bind(this, 'password')} onKeyPress={this.handleKeyPress} />
-                        </Form.Item>
-                    </Form>
 
-                    <Button color="primary" loading={this.state.loadingSignIn} onClick={(e) => this.handleSubmit(e)}>Login</Button>
-
-                    <div>
-                        <p id="already-have-account"><a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Esqueci a senha</a></p>
+                    <div class="info">
+                        <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
+                        <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
+
+                    <div class="area-inputs">
+
+                        <h1 class="title-home-page title-color">Login</h1>
+                        <div class="barra-azul"></div>
+
+                        <div class="text-form-area">
+
+                            <Form id="teste" htmlFor="email" className={classes.allForm} ref="form" model={this.state.form} rules={this.state.rules}>
+                                <Form.Item prop="email" labelWidth="0px">
+                                    <Input className="inputs-sing-up" placeholder={"Email"} type="text" value={this.state.form.email} onChange={this.onChange.bind(this, 'email')} onKeyPress={this.handleKeyPress} />
+                                </Form.Item>
+                                <Form.Item prop="password" labelWidth="0px">
+                                    <Input className="inputs-sing-up" placeholder={"Senha"} type="password" value={this.state.form.password} onChange={this.onChange.bind(this, 'password')} onKeyPress={this.handleKeyPress} />
+                                </Form.Item>
+                            </Form>
+
+                            <Button color="primary" loading={this.state.loadingSignIn} onClick={(e) => this.handleSubmit(e)}>Login</Button>
+
+                            <div>
+                                <p id="already-have-account"><a id="rote-sign-in" onClick={(e) => this.roteSignIn(e)}>Esqueci a senha</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-20 move-right-animation align-right">
+                    <img src={bgOrange}></img>
                 </div>
 
             </div>
         );
     }
 }
+
 
 export default SignIn;
