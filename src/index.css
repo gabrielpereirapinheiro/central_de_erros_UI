@@ -43,14 +43,14 @@ body{
 }
 
 .title-home-page{
-  font-size: 100px;
+  font-size: 6rem;
   font-weight:800;
 }
 
 .title-color{
   color: #FF9000;
   font-family: 'Roboto', sans-serif;
-  line-height:70px;
+  line-height:4.3rem;
   outline-color:rgb(255, 144, 0);
   outline-style:none;
   outline-width:0px;
@@ -88,13 +88,14 @@ body{
 
 
 .barra-azul{
+  margin-top:10px;
   width: 76px;
   height: 10px;
   border-bottom: 3px solid #0F6EB4;
 }
 
 .sub-title-home-page{
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 100;
 }
 
@@ -121,7 +122,7 @@ body{
 
 .info-text{
   margin-left: 10px;
-  font-size: 11px;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -316,6 +317,10 @@ body{
     animation: moveInLeft;
     animation-duration: 2s;
   }
+  .area-inputs{
+    width: auto;
+    height: 330px;
+  }
 }
 
 
@@ -327,6 +332,83 @@ body{
     letter-spacing: 35px;
     animation: moveInLeft;
     animation-duration: 2s;
+  }
+  .area-inputs{
+    height: 300px;
+  }
+}
+
+@media (max-width:800px){
+  p {
+    font-size: 0.8em;
+  }
+  .div-60 {
+    width: 70%;
+    height: 100em;
+  }
+  .area-inputs{
+    height: 260px;
+  }
+  .div-20 img{
+    width: 90%;
+  }
+  .text-form-area {
+    margin-top: 4%;
+  }
+  .el-form-item {
+    margin-bottom: 18px;
+  }
+  
+  .title-home-page{
+    font-size: 5rem;
+    height: 56px;
+  }
+  .sub-title-home-page{
+    font-size: 2.5rem;
+    height: 56px;
+  }
+  .barra-azul {
+    margin-top: 34px;
+  }
+}
+
+@media (max-width:600px){
+  .info-text {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+  .title-home-page{
+    font-size: 4.5rem;
+  }
+  .sub-title-home-page{
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width:450px){
+  .div-60 {
+    width: 70%;
+    height: 100em;
+  }
+  .area-inputs{
+    height: 200px;
+  }
+  .title-home-page{
+    font-size: 3.2rem;
+    height: 60px;
+  }
+  .sub-title-home-page{
+    font-size: 2.4rem;
+    height: 40px;
+  }
+  .barra-azul {
+    margin-top: 16px;
+  }
+  .el-input__inner {
+    width: unset;
+  }
+  .el-form-item {
+    margin-bottom: 10px;
   }
 }
 

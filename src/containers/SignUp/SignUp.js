@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import classes from './SignUp.css';
 import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
-import tick from "../../assets/img/navegador.svg";
+// import tick from "../../assets/img/navegador.svg";
 import bgPink from '../../assets/img/bg-orange-left.svg'
-import bgOrange from '../../assets/img/bg-pink-right.svg'
+// import bgOrange from '../../assets/img/bg-pink-right.svg'
 class SignUp extends Component {
     state = {
         loadingSignUp: false,
@@ -74,7 +74,7 @@ class SignUp extends Component {
                     <div class="info">
                     <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
                         <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastrar</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
                         <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
 
@@ -106,10 +106,10 @@ class SignUp extends Component {
 
                     </div>
                 </div>
-{/* 
-                <div class="div-20 move-right-animation align-right">
-                    <img src={bgOrange}></img>
-                </div> */}
+ 
+                <div class="div-20 align-right">
+                    
+                </div>
 
             </div>
 

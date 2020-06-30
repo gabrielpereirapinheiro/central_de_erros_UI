@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import classes from './SignIn.css';
 import { Button, Form, Input } from 'element-react';
 // import { Button } from '@material-ui/core';
-import bgPink from '../../assets/img/bg-orange-left.svg'
+// import bgPink from '../../assets/img/bg-orange-left.svg'
 import bgOrange from '../../assets/img/bg-pink-right.svg'
+import Cookies from "js-cookie";
 
 class SignIn extends Component {
     state = {
@@ -54,6 +55,17 @@ class SignIn extends Component {
         this.refs.form.validate((valid) => {
             if (valid) {
                 this.setState({ sucessSignIn: true });
+                
+                const expirationDate = new Date(new Date().getTime() + 1111110* 1000);
+                let token = "tokentesteblabla";
+                Cookies.set('tk', token, {
+                    expires: expirationDate,
+                    secure: (window.location.protocol === 'https:')
+                });
+                
+                window.location.reload();
+                // this.routeTo("");
+
             } else {
                 this.setState({ loadingSignIn: false });
             }
@@ -74,7 +86,7 @@ class SignIn extends Component {
                     <div class="info">
                         <h3 onClick={(e) => this.routeTo("")} class="info-text float-right">Início</h3>
                         <h3 onClick={(e) => this.routeTo("sign-in")} class="info-text float-right">Login</h3>
-                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastrar</h3>
+                        <h3 onClick={(e) => this.routeTo("sign-up")} class="info-text float-right">Cadastro</h3>
                         <h3 onClick={(e) => this.routeTo("about")} class="info-text float-right">Sobre</h3>
                     </div>
 
