@@ -304,7 +304,6 @@ body{
   animation-fill-mode: backwards;
 }
 
-
 @media (max-width:1300px){
   .heading-primary-main{
     display: block;
@@ -319,7 +318,6 @@ body{
     height: 330px;
   }
 }
-
 
 @media (max-width:1000px){
   .heading-primary-main{
