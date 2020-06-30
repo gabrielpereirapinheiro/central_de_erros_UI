@@ -106,10 +106,10 @@ class SignUp extends Component {
 
                     </div>
                 </div>
-{/* 
-                <div class="div-20 move-right-animation align-right">
-                    <img src={bgOrange}></img>
-                </div> */}
+ 
+                <div class="div-20 align-right">
+                    
+                </div>
 
             </div>
 
