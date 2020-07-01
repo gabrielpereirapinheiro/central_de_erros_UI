@@ -16,9 +16,9 @@
 Para instalar as dependências do projeto, execute o seguinte comando:
 
 ```
-make build
-
+make build 
 ```
+
 ## Rodar o Projeto
 
 ### Em modo de desenvolvimento
@@ -28,3 +28,8 @@ make build
 ```
 make up
 ```
+
+
+## Mockups
+
+[Link figma](https://www.figma.com/file/QBpWKfEDvJGPzkVeqjyYUy/Central-de-erros?node-id=0%3A1) 
