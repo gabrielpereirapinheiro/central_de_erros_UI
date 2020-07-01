@@ -107,9 +107,9 @@ class SignUp extends Component {
                     </div>
                 </div>
  
-                <div class="div-20 align-right">
+                {/* <div class="div-20 align-right">
                     
-                </div>
+                </div> */}
 
             </div>
 

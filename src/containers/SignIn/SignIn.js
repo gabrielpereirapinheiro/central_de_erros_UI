@@ -75,10 +75,9 @@ class SignIn extends Component {
     render() {
         return (
             <div class="div-home-page full-page">
-
+{/* 
                 <div class="div-20 move-left-animation">
-                    {/* <img src={bgPink}></img> */}
-                </div>
+                </div> */}
 
                 <div class="div-60">
 

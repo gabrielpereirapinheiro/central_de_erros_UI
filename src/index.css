@@ -40,6 +40,7 @@ body{
 
 .div-home-page{
   display: flex;
+  overflow-y: hidden;
 }
 
 .title-home-page{
@@ -338,8 +339,8 @@ body{
     font-size: 0.8em;
   }
   .div-60 {
-    width: 70%;
-    height: 100em;
+    width: 80%;
+    height: 100vh;
   }
   .area-inputs{
     height: 260px;
@@ -382,8 +383,8 @@ body{
 
 @media (max-width:450px){
   .div-60 {
-    width: 70%;
-    height: 100em;
+    width: 80%;
+    height: 100vh;
   }
   .area-inputs{
     height: 200px;
